@@ -7,12 +7,24 @@ def main():
 
 def gpt_comm():
     messages = []
-    sys_msg = "Opening chat, end it with <quit()>?\n"
+    sys_msg = "Opening chat, end it with <--quit>\n"
     print(sys_msg)
     messages.append({"role":"system", "content":sys_msg})
     messages.append({"role":"user", "content":"Hello"})
 
-    while input != 'quit()':
+    response = openai.ChatCompletion.create(
+            model = "gpt-3.5-turbo",
+            messages=messages,
+            temperature=0.1
+        )
+
+    reply = response["choices"][0]['message']['content']
+    messages.append({"role":"assistant", "content":reply})
+
+    print(reply+"\n")
+
+    message = ''
+    while message != '--quit':
         message = input()
         messages.append({"role":"user", "content":message})
 
@@ -25,7 +37,7 @@ def gpt_comm():
         reply = response["choices"][0]['message']['content']
         messages.append({"role":"assistant", "content":reply})
 
-        print("\n"+reply+"\n")
+        print(reply+"\n")
     
     return
 
