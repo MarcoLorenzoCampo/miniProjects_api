@@ -11,10 +11,8 @@ def gpt_reworker():
 
     article_data = scrape_news()
 
-    #prompt to translate in english
-    prompt = """
-        Translate in formal english. For each article include the date, title and body, all translated.
-        """
+    with open("prompt.txt", "r", encoding='utf-8') as f:
+        prompt = f.read()
 
     messages = []
     print("Translation on the way\n")
