@@ -10,7 +10,7 @@ Additionally, a non-translated version is available in the ```articles.txt``` fi
 set your OpenAI API key as an environment variable using:
 
 ```bash
-setx OPENAI_API_KEY <key_value>
+setx OPENAI_API_KEY "your_key_value"
 ```
 
 If you're relying on a free OpenAI plan (like me), expect the output to be truncated depending on the maximum request rate allowed. 

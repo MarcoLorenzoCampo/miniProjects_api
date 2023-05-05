@@ -13,9 +13,7 @@ def gpt_reworker():
 
     #prompt to translate in english
     prompt = """
-        Use 20 words per row.
-        Translate in formal english.
-        Each article must have its date, title and body, all in different sections.
+        Translate in formal english. For each article include the date, title and body, all translated.
         """
 
     messages = []
