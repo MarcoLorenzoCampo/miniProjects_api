@@ -13,4 +13,7 @@ set your OpenAI API key as an environment variable using:
 setx OPENAI_API_KEY "your_key_value"
 ```
 
+The model can be used to perform various tasks on the input file by editing the ```prompt.txt``` file.
+
+#### Additional Notes
 If you're relying on a free OpenAI plan (like me), expect the output to be truncated depending on the maximum request rate allowed. 
