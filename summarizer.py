@@ -11,6 +11,7 @@ def gpt_reworker():
 
     article_data = scrape_news()
 
+    #read the prompt
     with open("prompt.txt", "r", encoding='utf-8') as f:
         prompt = f.read()
 
