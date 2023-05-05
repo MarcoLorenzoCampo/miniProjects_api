@@ -17,7 +17,7 @@ def gpt_reworker():
         """
 
     messages = []
-    print("Reading from italian news... Done.\nTranslation on the way\n")
+    print("Translation on the way\n")
     with open("translated_articles.txt", "w", encoding='utf-8') as translation:
         for data in article_data:
 
@@ -46,6 +46,9 @@ def get_key():
     return key
 
 def scrape_news():
+
+    print("Reading from italian news... ")
+          
     url = "https://www.ansa.it/sito/notizie/topnews/index.shtml"
     response = requests.get(url)
 
@@ -91,6 +94,7 @@ def scrape_news():
             articles_file.write(data['title'] + '\n')
             articles_file.write(data['body'] + '\n\n')
     
+    print("Done\n")
     return article_data
     
 
