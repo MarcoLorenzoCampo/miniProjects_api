@@ -5,12 +5,19 @@ Summarizer scapres the italian news site ```https://ansa.it/``` for the most rec
 
 Additionally, a non-translated version is available in the ```articles.txt``` file.
 
-### How to use
+## How to use
 
 set your OpenAI API key as an environment variable using:
 
+### On Windows
+
 ```bash
 setx OPENAI_API_KEY "your_key_value"
+```
+### On Unix Systems
+
+```bash
+export OPENAI_API_KEY = "your_key_value"
 ```
 
 The model can be used to perform various tasks on the input file by editing the ```prompt.txt``` file.
